@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter01/shared/constants.dart';
+import 'package:flutter01/shared/custCards.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -19,13 +20,27 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0,
       ),
       body: Container(
-        child: IconButton(
-            // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
-            icon: FaIcon(FontAwesomeIcons.addressBook),
-            onPressed: () {
-              print("Pressed");
-            }),
-      ),
+          child: Wrap(
+        alignment: WrapAlignment.start,
+        direction: Axis.horizontal,
+        children: [
+          CustCards(
+            prodname: "NIKE KYRIE",
+            colors: [Color(0xFF013172), Color(0xFF12e506)],
+          ),
+          CustCards(
+              prodname: "NIKE KOBE",
+              colors: [Color(0xFF614d83), Color(0xFFe12c3e)]),
+          Center(
+            child: IconButton(
+                // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
+                icon: FaIcon(FontAwesomeIcons.addressBook),
+                onPressed: () {
+                  print("Pressed");
+                }),
+          ),
+        ],
+      )),
     );
   }
 }
