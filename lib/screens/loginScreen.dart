@@ -46,7 +46,7 @@ class LoginScreen extends StatelessWidget {
         Container(
           width: MediaQuery.of(context).size.width,
           color: Colors.transparent,
-          child: loginButtons(),
+          child: loginButtons(context),
         ),
       ],
     );
@@ -78,18 +78,22 @@ class LoginScreen extends StatelessWidget {
           Container(
             width: MediaQuery.of(context).size.width * .35,
             decoration: gradientColor(),
-            child: loginButtons(),
+            child: loginButtons(context),
           )
         ],
       ),
     );
   }
 
-  Column loginButtons() {
+  Column loginButtons(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        ElevatedButton(onPressed: () {}, child: const Text("Login to Google")),
+        ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/home');
+            },
+            child: const Text("Login to Google")),
         const SizedBox(
           height: 10,
         ),
