@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
-class CustCards extends StatelessWidget {
+
+class CustCards extends StatefulWidget {
   final String prodname;
   final List<Color> colors;
   const CustCards({Key? key, this.prodname = "", required this.colors})
       : super(key: key);
 
+  @override
+  State<CustCards> createState() => _CustCardsState();
+}
+
+class _CustCardsState extends State<CustCards> {
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -28,12 +34,14 @@ class CustCards extends StatelessWidget {
                   //     "https://randomuser.me/api/portraits/med/men/75.jpg"),
                   fit: BoxFit.cover,
                 )),
+                SizedBox(height: 15,),
             GradientText(
-              prodname,
+              widget.prodname,
               gradientDirection: GradientDirection.ltr,
               style: TextStyle(fontSize: 15),
-              colors: colors,
-            )
+              colors: widget.colors,
+            ),
+            Text("aklsdfklajsdfjasdlfkj", )
           ],
         ),
       ),

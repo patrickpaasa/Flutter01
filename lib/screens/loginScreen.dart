@@ -70,9 +70,10 @@ class LoginScreen extends StatelessWidget {
         children: [
           Container(
             width: MediaQuery.of(context).size.width * .65,
+            height: MediaQuery.of(context).size.height,
             child: Image(
               image: AssetImage("assets/migpro.jpeg"),
-              fit: BoxFit.cover,
+              fit: BoxFit.cover
             ),
           ),
           Container(
