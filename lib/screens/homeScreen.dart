@@ -24,13 +24,13 @@ class _HomeScreenState extends State<HomeScreen> {
         alignment: WrapAlignment.start,
         direction: Axis.horizontal,
         children: [
-          CustCards(
-            prodname: "NIKE KYRIE",
-            colors: [Color(0xFF013172), Color(0xFF12e506)],
-          ),
-          CustCards(
-              prodname: "NIKE KOBE",
-              colors: [Color(0xFF614d83), Color(0xFFe12c3e)]),
+          // CustCards(
+          //   prodname: "NIKE KYRIE",
+          //   colors: [Color(0xFF013172), Color(0xFF12e506)],
+          // ),
+          // CustCards(
+          //     prodname: "NIKE KOBE",
+          //     colors: [Color(0xFF614d83), Color(0xFFe12c3e)]),
           Center(
             child: IconButton(
                 // Use the FaIcon Widget + FontAwesomeIcons class for the IconData

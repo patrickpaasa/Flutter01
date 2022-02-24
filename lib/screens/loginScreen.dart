@@ -15,7 +15,7 @@ class LoginScreen extends StatelessWidget {
         ),
         body: LayoutBuilder(
           builder: (BuildContext context, BoxConstraints constraint) {
-            if (constraint.maxWidth > 600) {
+            if (constraint.maxWidth > 720) {
               return _lanscapeUI(context);
             } else {
               return _portraitUI(context);
@@ -102,7 +102,9 @@ class LoginScreen extends StatelessWidget {
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/house');
+            },
             child: const Text("Login to Facebook")),
         const SizedBox(
           height: 10,
